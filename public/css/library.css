@@ -1,0 +1,18 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+  .card-img-top {
+      height : 300px;
+     
+  }
+
+  .link-btn {
+      display : flex;
+      padding : 3px;
+      flex-direction: column;
+      justify-content: center;
+  }

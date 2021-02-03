@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.homebuttons {
+  background: url("../images/homebook5.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.homebuttons ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  height: 380px;
+  width: 50vw;
+}
+
+.homebuttons li {
+  list-style-type: none;
+}
+
+.homebuttons a {
+  padding: 8px 26px;
+  margin: auto 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #48cae4;
+  font-size: larger;
+}

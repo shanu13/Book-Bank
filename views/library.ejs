@@ -1,0 +1,41 @@
+<%- include('./head.ejs')  %> 
+<link rel="stylesheet" href="css/library.css">
+
+</head>
+
+
+<body>
+   <%- include('./navbar.ejs')  %> 
+  <main> 
+     <% if(Allbook.length > 0) { %>
+
+      <div class="grid">
+
+         <% for(let book of Allbook) { %> 
+
+
+      <div class="card" style="width: 18rem;">
+         <img class="card-img-top" src="<%= ` ${book.imageUrl}` %> " alt="<%= book.name %> ">
+         <div class="card-body">
+           <h5 class="card-title text-center"><%= book.name  %> </h5>
+         </div>
+         <div class="card-body">
+           <div class="link-btn">
+               <a href="<%= `${book.pdfUrl}` %>" target="_blank" class="btn"> Read Book</a>
+               <a href="/update/<%= book.id %>/?edit=true" %> " class="btn">Update Book</a>
+               <a  id="delete" data-bookid ="<%= `${book.id}` %>" class="btn">Delete Book</a>
+            </div>
+          
+         </div>
+       </div>
+
+  
+      <% } %> 
+      </div>
+      <% } else { %>
+         <h1 class="text-center">No Book Found</h1> 
+         <% } %> 
+  </main>
+
+
+   <%- include('./end.ejs') %> 
